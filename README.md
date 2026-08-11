@@ -1,4 +1,8 @@
-# Ginzzzu's Camera Frames — 0.6.2
+# Ginzzzu's Camera Frames
+
+![GitHub Release](https://img.shields.io/github/v/release/Ginzzzu/ginzzzu-camera-frames?label=Version)
+![Total Downloads](https://img.shields.io/github/downloads/Ginzzzu/ginzzzu-camera-frames/ginzzzu-camera-frames.zip?label=Total%20Downloads)
+![Latest Release Downloads](https://img.shields.io/github/downloads/Ginzzzu/ginzzzu-camera-frames/latest/ginzzzu-camera-frames.zip?label=Latest%20Release)
 
 Version 0.6.2 synchronizes each player's permitted personal camera appearance for every connected participant.
 
