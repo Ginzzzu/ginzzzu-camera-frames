@@ -1,0 +1,132 @@
+.ginzzzu-camera-frames-settings .gcf-settings {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  gap: 0.75rem;
+  padding: 0.85rem;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__header h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__header p,
+.ginzzzu-camera-frames-settings .gcf-settings__hint {
+  margin: 0;
+  color: var(--color-text-secondary, #b9b1a7);
+  line-height: 1.35;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__body {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow: auto;
+  padding-right: 0.2rem;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--color-border-light-tertiary, rgba(255, 255, 255, 0.16));
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.18);
+  line-height: 1.35;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__card,
+.ginzzzu-camera-frames-settings .gcf-settings__field {
+  border: 1px solid var(--color-border-light-tertiary, rgba(255, 255, 255, 0.16));
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__card {
+  padding: 0.75rem;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__category-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 700;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__category-toggle input,
+.ginzzzu-camera-frames-settings .gcf-settings__option input {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__card > .gcf-settings__hint {
+  margin-top: 0.35rem;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.4rem 0.65rem;
+  margin-top: 0.7rem;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__option {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+  padding: 0.35rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__field {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.85fr) minmax(220px, 1.15fr);
+  gap: 0.35rem 0.8rem;
+  align-items: center;
+  padding: 0.75rem;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__field > label {
+  font-weight: 700;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__field select {
+  width: 100%;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__field .gcf-settings__hint {
+  grid-column: 1 / -1;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__footer {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  padding-top: 0.15rem;
+}
+
+.ginzzzu-camera-frames-settings .gcf-settings__footer button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 150px;
+}
+
+@media (max-width: 620px) {
+  .ginzzzu-camera-frames-settings .gcf-settings__field {
+    grid-template-columns: 1fr;
+  }
+
+  .ginzzzu-camera-frames-settings .gcf-settings__field .gcf-settings__hint {
+    grid-column: 1;
+  }
+}

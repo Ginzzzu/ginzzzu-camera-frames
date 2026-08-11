@@ -1,0 +1,43 @@
+{
+  "id": "ginzzzu-camera-frames",
+  "title": "Ginzzzu's Camera Frames",
+  "description": "Independent camera masks and configurable circular CSS frames for Foundry VTT 14, with GM-controlled player customization synchronized for every participant.",
+  "version": "0.6.2",
+  "authors": [
+    {
+      "name": "Ginzzzu"
+    }
+  ],
+  "esmodules": [
+    "scripts/camera-appearance-model.js",
+    "scripts/camera-settings.js",
+    "scripts/camera-settings-app.js",
+    "scripts/camera-mask.js",
+    "scripts/camera-frame.js"
+  ],
+  "styles": [
+    "styles/camera-mask.css",
+    "styles/camera-shapes.css",
+    "styles/camera-controls.css",
+    "styles/camera-glass.css",
+    "styles/camera-frames.css",
+    "styles/camera-personal.css",
+    "styles/settings-app.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "ru",
+      "name": "Русский",
+      "path": "lang/ru.json"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  }
+}

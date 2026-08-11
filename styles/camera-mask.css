@@ -1,0 +1,132 @@
+/* The module only styles existing Foundry camera elements. It does not add
+   elements to .camera-view and does not change camera layout or dimensions. */
+html.ginzzzu-camera-frames #camera-views,
+html.ginzzzu-camera-frames .camera-view,
+html.ginzzzu-camera-frames .camera-view .video-container,
+html.ginzzzu-camera-frames .camera-view .video-wrapper {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-image: none !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+html.ginzzzu-camera-frames .camera-view .video-container,
+html.ginzzzu-camera-frames .camera-view video,
+html.ginzzzu-camera-frames .camera-view video.user-camera,
+html.ginzzzu-camera-frames .camera-view .user-camera video {
+  -webkit-mask-image: var(--ginzzzu-camera-frames-mask-image, url("../assets/camera-mask.png"));
+  mask-image: var(--ginzzzu-camera-frames-mask-image, url("../assets/camera-mask.png"));
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html.ginzzzu-camera-frames .camera-view .control-bar,
+html.ginzzzu-camera-frames .camera-view .camera-controls,
+html.ginzzzu-camera-frames .camera-view .av-controls,
+html.ginzzzu-camera-frames .camera-view .user-controls,
+html.ginzzzu-camera-frames .camera-view .notification-bar,
+html.ginzzzu-camera-frames .camera-view .connection-quality,
+html.ginzzzu-camera-frames .camera-view .connection-status,
+html.ginzzzu-camera-frames .camera-view .av-quality,
+html.ginzzzu-camera-frames .camera-view [class*="connection"],
+html.ginzzzu-camera-frames .camera-view [class*="quality"],
+html.ginzzzu-camera-frames .camera-view [class*="status"],
+html.ginzzzu-camera-frames .camera-view [class*="voice"],
+html.ginzzzu-camera-frames .camera-view [class*="speaking"],
+html.ginzzzu-camera-frames .camera-view [class*="activity"],
+html.ginzzzu-camera-frames .camera-view [class*="volume"],
+html.ginzzzu-camera-frames .camera-view i.fa-circle,
+html.ginzzzu-camera-frames .camera-view [data-action="toggle-popout"] {
+  opacity: 0 !important;
+  transition: opacity 140ms ease !important;
+}
+
+html.ginzzzu-camera-frames .camera-view:hover .control-bar,
+html.ginzzzu-camera-frames .camera-view:hover .camera-controls,
+html.ginzzzu-camera-frames .camera-view:hover .av-controls,
+html.ginzzzu-camera-frames .camera-view:hover .user-controls,
+html.ginzzzu-camera-frames .camera-view:hover .notification-bar,
+html.ginzzzu-camera-frames .camera-view:hover .connection-quality,
+html.ginzzzu-camera-frames .camera-view:hover .connection-status,
+html.ginzzzu-camera-frames .camera-view:hover .av-quality,
+html.ginzzzu-camera-frames .camera-view:hover [class*="connection"],
+html.ginzzzu-camera-frames .camera-view:hover [class*="quality"],
+html.ginzzzu-camera-frames .camera-view:hover [class*="status"],
+html.ginzzzu-camera-frames .camera-view:hover [class*="voice"],
+html.ginzzzu-camera-frames .camera-view:hover [class*="speaking"],
+html.ginzzzu-camera-frames .camera-view:hover [class*="activity"],
+html.ginzzzu-camera-frames .camera-view:hover [class*="volume"],
+html.ginzzzu-camera-frames .camera-view:hover i.fa-circle,
+html.ginzzzu-camera-frames .camera-view:hover [data-action="toggle-popout"] {
+  opacity: 1 !important;
+}
+
+html.ginzzzu-camera-frames .camera-view .player-name {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html.ginzzzu-camera-frames .camera-view .bottom {
+  background: radial-gradient(
+    ellipse 64% 100% at 50% 46%,
+    rgba(5, 4, 8, 0.78) 0%,
+    rgba(5, 4, 8, 0.52) 38%,
+    rgba(5, 4, 8, 0.16) 64%,
+    transparent 100%
+  ) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  transition: background 140ms ease !important;
+}
+
+html.ginzzzu-camera-frames .camera-view:hover .bottom {
+  background: radial-gradient(
+    ellipse 76% 112% at 50% 48%,
+    rgba(5, 4, 8, 0.86) 0%,
+    rgba(5, 4, 8, 0.62) 42%,
+    rgba(5, 4, 8, 0.2) 68%,
+    transparent 100%
+  ) !important;
+}
+
+html.ginzzzu-camera-frames .camera-view .player-name::before {
+  opacity: 0 !important;
+  transition: opacity 140ms ease !important;
+}
+
+html.ginzzzu-camera-frames .camera-view:hover .player-name::before {
+  opacity: 1 !important;
+}
+
+html.ginzzzu-camera-frames .camera-view .window-resize-handle {
+  opacity: 0 !important;
+  transition: opacity 140ms ease !important;
+}
+
+html.ginzzzu-camera-frames .camera-view:hover .window-resize-handle {
+  opacity: 1 !important;
+}
+
+html.ginzzzu-camera-frames .camera-view::before,
+html.ginzzzu-camera-frames .camera-view::after,
+html.ginzzzu-camera-frames .camera-view .video-container::before,
+html.ginzzzu-camera-frames .camera-view .video-container::after,
+html.ginzzzu-camera-frames .camera-view .video-wrapper::before,
+html.ginzzzu-camera-frames .camera-view .video-wrapper::after {
+  border: 0 !important;
+  border-image: none !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}

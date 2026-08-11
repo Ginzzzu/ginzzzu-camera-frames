@@ -1,0 +1,44 @@
+<div class="gcf-settings">
+  <header class="gcf-settings__header">
+    <h2>{{localize "GINZZZU_CAMERA_FRAMES.App.Personal.Heading"}}</h2>
+    <p>{{localize "GINZZZU_CAMERA_FRAMES.App.Personal.Intro"}}</p>
+  </header>
+
+  <div class="gcf-settings__body">
+    {{#unless personalModeEnabled}}
+      <p class="gcf-settings__notice">
+        <i class="fa-solid fa-lock" aria-hidden="true"></i>
+        {{localize "GINZZZU_CAMERA_FRAMES.App.Personal.Disabled"}}
+      </p>
+    {{else}}
+      {{#unless hasCategories}}
+        <p class="gcf-settings__notice">
+          <i class="fa-solid fa-lock" aria-hidden="true"></i>
+          {{localize "GINZZZU_CAMERA_FRAMES.App.Personal.NoCategories"}}
+        </p>
+      {{/unless}}
+
+      {{#each categories}}
+        <section class="gcf-settings__field">
+          <label for="gcf-personal-{{key}}">{{localize nameKey}}</label>
+          <select id="gcf-personal-{{key}}" name="{{userSetting}}">
+            <option value="inherit" {{#if inheritSelected}}selected{{/if}}>{{inheritLabel}}</option>
+            {{#each options}}
+              <option value="{{value}}" {{#if selected}}selected{{/if}}>{{localize label}}</option>
+            {{/each}}
+          </select>
+          <p class="gcf-settings__hint">{{localize hintKey}}</p>
+        </section>
+      {{/each}}
+    {{/unless}}
+  </div>
+
+  {{#if canSave}}
+    <footer class="gcf-settings__footer">
+      <button type="submit">
+        <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i>
+        {{localize "GINZZZU_CAMERA_FRAMES.App.Common.Save"}}
+      </button>
+    </footer>
+  {{/if}}
+</div>

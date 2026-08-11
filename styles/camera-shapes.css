@@ -1,0 +1,9 @@
+/* Stage 2 adds only a CSS mask override. Camera dimensions and layout remain
+   controlled entirely by Foundry VTT. */
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--circle .camera-view .video-container,
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--circle .camera-view video,
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--circle .camera-view video.user-camera,
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--circle .camera-view .user-camera video {
+  -webkit-mask-image: radial-gradient(circle closest-side at center, #fff 99%, transparent 100%);
+  mask-image: radial-gradient(circle closest-side at center, #fff 99%, transparent 100%);
+}

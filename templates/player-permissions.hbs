@@ -1,0 +1,40 @@
+<div class="gcf-settings">
+  <header class="gcf-settings__header">
+    <h2>{{localize "GINZZZU_CAMERA_FRAMES.App.Permissions.Heading"}}</h2>
+    <p>{{localize "GINZZZU_CAMERA_FRAMES.App.Permissions.Intro"}}</p>
+    {{#unless personalModeEnabled}}
+      <p class="gcf-settings__notice">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        {{localize "GINZZZU_CAMERA_FRAMES.App.Permissions.PersonalModeDisabled"}}
+      </p>
+    {{/unless}}
+  </header>
+
+  <div class="gcf-settings__body">
+    {{#each categories}}
+      <section class="gcf-settings__card">
+        <label class="gcf-settings__category-toggle">
+          <input type="checkbox" name="enabled-{{key}}" {{#if enabled}}checked{{/if}}>
+          <span>{{localize nameKey}}</span>
+        </label>
+        <p class="gcf-settings__hint">{{localize hintKey}}</p>
+
+        <div class="gcf-settings__options">
+          {{#each options}}
+            <label class="gcf-settings__option">
+              <input type="checkbox" name="allowed-{{../key}}" value="{{value}}" {{#if checked}}checked{{/if}}>
+              <span>{{localize label}}</span>
+            </label>
+          {{/each}}
+        </div>
+      </section>
+    {{/each}}
+  </div>
+
+  <footer class="gcf-settings__footer">
+    <button type="submit">
+      <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i>
+      {{localize "GINZZZU_CAMERA_FRAMES.App.Common.Save"}}
+    </button>
+  </footer>
+</div>

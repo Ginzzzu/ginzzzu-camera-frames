@@ -1,0 +1,84 @@
+/* The independent glare and inner-shadow layers use .camera-view::before and
+   are clipped to the circular camera shape. They remain pointer-transparent
+   and do not affect controls, names, sizing, or Foundry's camera layout. */
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--circle .camera-view::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    var(--ginzzzu-camera-frames-glare, linear-gradient(transparent, transparent)),
+    var(--ginzzzu-camera-frames-frame-halo, linear-gradient(transparent, transparent)),
+    var(--ginzzzu-camera-frames-inner-shadow, linear-gradient(transparent, transparent)) !important;
+  -webkit-mask-image: radial-gradient(circle closest-side at center, #fff 99%, transparent 100%);
+  mask-image: radial-gradient(circle closest-side at center, #fff 99%, transparent 100%);
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--glare-low {
+  --ginzzzu-camera-frames-glare: radial-gradient(
+    ellipse 50% 24% at 38% 17%,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.055) 48%,
+    transparent 76%
+  );
+}
+
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--glare-medium {
+  --ginzzzu-camera-frames-glare: radial-gradient(
+    ellipse 54% 27% at 36% 16%,
+    rgba(255, 255, 255, 0.21) 0%,
+    rgba(255, 255, 255, 0.085) 46%,
+    transparent 75%
+  );
+}
+
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--glare-high {
+  --ginzzzu-camera-frames-glare: radial-gradient(
+    ellipse 58% 29% at 35% 15%,
+    rgba(255, 249, 224, 0.25) 0%,
+    rgba(255, 245, 210, 0.105) 45%,
+    transparent 75%
+  );
+}
+
+/* Stronger levels now expand substantially farther into the image instead of
+   changing mainly the edge opacity. The center remains clear for faces. */
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--inner-shadow-low {
+  --ginzzzu-camera-frames-inner-shadow: radial-gradient(
+    circle closest-side at center,
+    transparent 84%,
+    rgba(0, 0, 0, 0.07) 89%,
+    rgba(0, 0, 0, 0.18) 96%,
+    rgba(0, 0, 0, 0.28) 99%,
+    transparent 100%
+  );
+}
+
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--inner-shadow-medium {
+  --ginzzzu-camera-frames-inner-shadow: radial-gradient(
+    circle closest-side at center,
+    transparent 68%,
+    rgba(0, 0, 0, 0.055) 76%,
+    rgba(0, 0, 0, 0.14) 86%,
+    rgba(0, 0, 0, 0.34) 97%,
+    rgba(0, 0, 0, 0.44) 99%,
+    transparent 100%
+  );
+}
+
+html.ginzzzu-camera-frames.ginzzzu-camera-frames--inner-shadow-high {
+  --ginzzzu-camera-frames-inner-shadow: radial-gradient(
+    circle closest-side at center,
+    transparent 52%,
+    rgba(18, 12, 8, 0.045) 62%,
+    rgba(14, 9, 6, 0.12) 76%,
+    rgba(10, 7, 5, 0.25) 89%,
+    rgba(8, 5, 4, 0.46) 97%,
+    rgba(7, 4, 3, 0.58) 99%,
+    transparent 100%
+  );
+}

@@ -1,0 +1,9 @@
+/* Stage 3 removes only the rectangular lower-panel background. The existing
+   player name, controls, hover behavior, and camera layout remain unchanged. */
+html.ginzzzu-camera-frames .camera-view .bottom,
+html.ginzzzu-camera-frames .camera-view:hover .bottom {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
