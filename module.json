@@ -1,13 +1,16 @@
 {
   "id": "ginzzzu-camera-frames",
   "title": "Ginzzzu's Camera Frames",
-  "description": "Independent camera masks and configurable circular CSS frames for Foundry VTT 14, with GM-controlled player customization synchronized for every participant.",
+  "description": "Independent camera masks and configurable circular CSS frames for Foundry VTT 14, with GM-controlled player customization synchronized for every participant.<br><a href=\"https://discord.gg/bHA7JhVUCX\">Discord</a> · <a href=\"https://boosty.to/ginzzzu\">Boosty</a>",
   "version": "0.6.2",
   "authors": [
     {
       "name": "Ginzzzu"
     }
   ],
+  "url": "https://github.com/Ginzzzu/ginzzzu-camera-frames",
+  "manifest": "https://github.com/Ginzzzu/ginzzzu-camera-frames/releases/latest/download/module.json",
+  "download": "https://github.com/Ginzzzu/ginzzzu-camera-frames/releases/latest/download/ginzzzu-camera-frames.zip",
   "esmodules": [
     "scripts/camera-appearance-model.js",
     "scripts/camera-settings.js",
